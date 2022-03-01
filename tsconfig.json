@@ -17,12 +17,11 @@
     "node_modules/*",
     "src/types/*"
     ]
-    },
-    },
-    "exclude": ["dist"],
-    "include": [
-    "extraTs"
+    } ,
+    } ,
+    "exclude" : ["dist"],
+    "include" : [
+    "src"
     ],
-    "types": ["src/types"]
-}
-    
+    "types" :   ["src/types"]
+    } 
