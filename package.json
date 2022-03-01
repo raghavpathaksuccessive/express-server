@@ -4,7 +4,13 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start:extra": "babel-node extra",
+    "start:extraTs": "tsc-watch --project . --onSuccess \"npm run nodemon\"",
+    "nodemon": "nodemon ./dist/index.js",
+    "lint": "./node_modules/tslint/bin/tslint -c tslint.json -p tsconfig.json --exclude 'node_modules/**/*.{j,t}s'",
+    "lint:fix": "npm run lint --fix",
+    "commit": "cz"
   },
   "repository": {
     "type": "git",
@@ -16,5 +22,16 @@
   "bugs": {
     "url": "https://github.com/raghavpathaksuccessive/express-server/issues"
   },
-  "homepage": "https://github.com/raghavpathaksuccessive/express-server#readme"
+  "homepage": "https://github.com/raghavpathaksuccessive/express-server#readme",
+  "devDependencies": {
+    "@babel/core": "^7.17.5",
+    "@babel/node": "^7.16.8",
+    "@babel/preset-env": "^7.16.11",
+    "commitizen": "^4.2.4",
+    "husky": "^7.0.4",
+    "nodemon": "^2.0.15",
+    "tsc-watch": "^4.6.0",
+    "tslint": "^6.1.3",
+    "typescript": "^4.6.2"
+  }
 }

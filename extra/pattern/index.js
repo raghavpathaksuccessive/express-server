@@ -1,4 +1,4 @@
-import {diamond} from './diamond'
-import {equlitral} from './equlitral'
+import {diamond} from './diamond.js'
+import {equlitral} from './equlitral.js'
 console.log(diamond,equlitral)
 export {diamond,equlitral}
