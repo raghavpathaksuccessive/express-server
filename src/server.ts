@@ -1,7 +1,7 @@
 import * as express from 'express';
 import * as bodyParser from 'body-parser';
 import { notFoundHandler, errorHandler } from './libs/routes';
-
+import mainRouter  from './router';
 import * as cors from 'cors';
 
 class Server {
@@ -21,7 +21,7 @@ class Server {
               res.send('I am Ok');
         });
        
-      
+        app.use('/api', mainRouter);
         app.use(notFoundHandler);
         app.use(errorHandler);
           return this;
