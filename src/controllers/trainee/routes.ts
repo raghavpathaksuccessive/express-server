@@ -9,8 +9,10 @@ traineeRouter.route('/').get(authmiddleware('getUser', 'read'),validationHandler
 
 traineeRouter.route('/').post(traineeControler.create)
 
-traineeRouter.route('/').put( validationHandler ( config.update ),traineeControler.update)
+traineeRouter.route('/').put( authmiddleware('getUser', 'write'),validationHandler ( config.update ),traineeControler.update)
 
- traineeRouter.route('/:id').delete(validationHandler ( config.delete ),traineeControler.delete);
+ traineeRouter.route('/:id').delete(authmiddleware('getUser', 'read'),validationHandler ( config.delete ),traineeControler.delete);
+
+ traineeRouter.route('/login').post(traineeControler.login);
 export default traineeRouter;
 

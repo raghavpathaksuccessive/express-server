@@ -15,7 +15,7 @@ class userController {
         try {
             res.send({
                 status:"ok",
-                message: 'Successfully fetched trainee ',
+                message: 'Successfully fetched user ',
                 data:{
                      "data":"data"
                 }         
@@ -28,7 +28,7 @@ class userController {
         try {
             res.send({
                 status:"ok",
-                message: 'Successfully fetched trainee ',
+                message: 'Successfully fetched user ',
                 data:{
                      "data":"data"
                 }         
@@ -42,7 +42,7 @@ class userController {
         try {
             res.send({
                 status:"ok",
-                message: 'Successfully fetched trainee ',
+                message: 'Successfully fetched user ',
                 data:{
                      "data":"data"
                 }         
@@ -55,7 +55,7 @@ class userController {
         try {
             res.send({
                 status:"ok",
-                message: 'Successfully fetched trainee ',
+                message: 'Successfully fetched user ',
                 data:{
                      "data":"data"
                 }         
@@ -65,6 +65,8 @@ class userController {
             console.log('Inside err', err);
         }
     }
+
+    
 }
 
 export default new userController();
