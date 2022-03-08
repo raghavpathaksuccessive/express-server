@@ -133,14 +133,14 @@ traineeRouter.route('/').get(authmiddleware('getUser', 'read'),validationHandler
  *         in: body
  *         required: true
  *         type: object
- *         example: {
- *                       "userData": {
- *                          "name": "utkarsh",
+ *         example: 
+ *                        {
+ *                          "name": "raghav",
  *                          "role": "trainee",
  *                          "email": "test123@succesive.tech",
  *                          "password": "123"
  *                       }
- *                    }
+ *                    
  *     responses:
  *       200:
  *         description: User created
@@ -184,9 +184,9 @@ traineeRouter.route('/').post(traineeControler.create)
  *         example: {
  *                       "originalId": "5fbe2dc2bf231e2dacb1c5c4",
  *                       "dataToUpdate": {
- *                                         "name": "utkarsh Updated",
+ *                                         "name": "raghav updated",
  *                                         "role": "trainee",
- *                                         "email": "testutkarsh@succesive.tech"
+ *                                         "email": "raghav@succesive.tech"
  *                                      }
  *                    }
  *     responses:
